@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/LgMWqZK/The-Great-Gatsby-Cover-1925-Retouched.jpg",
+    "title": "The Great Gatsby",
+    "book_name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "book_type": "Novel",
+    "rating": 4.2,
+    "review": "A classic tale of wealth, ambition, and love, set in the roaring 1920s.",
+    "number_of_pages": 180,
+    "publisher": "Scribner",
+    "publish_year": 1925
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/bLGSpfK/220px-To-Kill-a-Mockingbird-first-edition-cover.jpg",
+    "title": "To Kill a Mockingbird",
+    "book_name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "book_type": "Fiction",
+    "rating": 4.5,
+    "review": "A timeless story of racial injustice and moral growth in a small Southern town.",
+    "number_of_pages": 336,
+    "publisher": "J. B. Lippincott & Co.",
+    "publish_year": 1960
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/6DmZBz1/220px-The-Catcher-in-the-Rye-1951-first-edition-cover.jpg",
+    "title": "The Catcher in the Rye",
+    "book_name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "book_type": "Novel",
+    "rating": 4.0,
+    "review": "A coming-of-age novel that has captured the hearts of readers for generations.",
+    "number_of_pages": 224,
+    "publisher": "Little, Brown and Company",
+    "publish_year": 1951
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/vqLXqT3/1984-first-edition-cover.jpg",
+    "title": "1984",
+    "book_name": "1984",
+    "author": "George Orwell",
+    "book_type": "Dystopian",
+    "rating": 4.6,
+    "review": "A chilling dystopian novel that explores themes of totalitarianism and surveillance.",
+    "number_of_pages": 328,
+    "publisher": "Secker & Warburg",
+    "publish_year": 1949
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/6Dr7DpR/Pride-And-Prejudice-Title-Page.jpg",
+    "title": "Pride and Prejudice",
+    "book_name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "book_type": "Romance",
+    "rating": 4.8,
+    "review": "A beloved romantic classic that continues to captivate readers with its wit and charm.",
+    "number_of_pages": 279,
+    "publisher": "T. Egerton, Whitehall",
+    "publish_year": 1813
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/7W9MPSc/The-Hobbit-First-Edition.jpg",
+    "title": "The Hobbit",
+    "book_name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "book_type": "Fantasy",
+    "rating": 4.7,
+    "review": "An enchanting tale of adventure and heroism set in Middle-earth.",
+    "number_of_pages": 310,
+    "publisher": "Allen & Unwin",
+    "publish_year": 1937
+  }
+]

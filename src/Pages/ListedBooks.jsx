@@ -1,0 +1,10 @@
+
+const ListedBooks = () => {
+    return (
+        <div>
+            <h2>i am from listed books</h2>
+        </div>
+    );
+};
+
+export default ListedBooks;
