@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
 
 const BookCard = ({book}) => {
-    const {id ,img ,title , publisher ,book_type ,rating } = book; 
+    const {id ,img ,title , publisher ,book_type ,rating ,tags } = book; 
     // console.log(book)
     return (
         <div className="border p-3">
@@ -12,7 +12,10 @@ const BookCard = ({book}) => {
             <figure><img className="h-[200px] mt-2" src={img} alt="Shoes" /></figure>
             </div>
             <div className="card-body">
-                <p className="w-28 bg-gray-300 p-3 text-center rounded-[30px] text-[#23BE0A] font-bold text-lg">{book_type}</p>
+                <div className="flex justify-between gap-20">
+                <p className="bg-gray-300 p-3 text-center rounded-[30px] text-[#23BE0A] font-bold text-lg">{tags[0]}</p>
+                <p className="bg-gray-300 p-3 text-center rounded-[30px] text-[#23BE0A] font-bold text-lg">{tags[1]}</p>
+                </div>
                 <h2 className="card-title">{title}</h2>
                 <p className="my-2">By: {publisher}</p>
                 <hr className="text-black"/>
