@@ -4,6 +4,8 @@ import PagesRead from "../Pages/PagesRead";
 import ListedBooks from "../Pages/ListedBooks";
 import Root from "../Layout/Root";
 import BookDetails from "../Components/BookDetalis/BookDetails";
+import ReadBooks from "../Components/NestedCard/ReadBooks";
+import WishList from "../Components/NestedCard/WishList";
 // import ReadBooks from "../Components/NestedCard/ReadBooks";
 // import WishList from "../Components/NestedCard/WishList";
 
@@ -19,7 +21,18 @@ import BookDetails from "../Components/BookDetalis/BookDetails";
                 },
                 {
                     path: '/listedBooks',
-                    element: <ListedBooks />
+                    element: <ListedBooks />,
+                    children: [
+                        {
+                            index: true,
+                            path: '',
+                            element:<ReadBooks />
+                        },
+                        {
+                            path: 'wishlist',
+                            element: <WishList />
+                        }
+                    ]
                 },
                 {
                     path:'/BookCard/:id',
@@ -33,15 +46,5 @@ import BookDetails from "../Components/BookDetalis/BookDetails";
         }
     ])
 
-    // children: [
-    //     {
-    //         index: true,
-    //         path: '',
-    //         element:<ReadBooks />
-    //     },
-    //     {
-    //         path: 'wishlist',
-    //         element: <WishList />
-    //     }
-    // ]
+    
 export default router;
