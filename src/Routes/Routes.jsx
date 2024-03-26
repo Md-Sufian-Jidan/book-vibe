@@ -28,7 +28,6 @@ import BookReview from "../Pages/BookReview";
                     children: [
                         {
                             index: true,
-                            path: 'readBooks',
                             element:<ReadBooks />
                         },
                         {

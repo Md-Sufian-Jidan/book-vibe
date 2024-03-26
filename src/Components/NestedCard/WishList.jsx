@@ -8,9 +8,8 @@ const WishList = () => {
     // setWish(storedWishList)
     return (
         <div>
-            {/* <h2>i am from wish list</h2> */}
             {
-storedWishList.map((wish)=> <WishListDetails key={wish.id} wish={wish}/>)
+                storedWishList.map((wish) => <WishListDetails key={wish.id} wish={wish} />)
             }
         </div>
     );

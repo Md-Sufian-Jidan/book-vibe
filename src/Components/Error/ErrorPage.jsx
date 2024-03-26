@@ -3,7 +3,7 @@ import { NavLink, useRouteError } from "react-router-dom";
 const ErrorPage = () => {
     const errorPage = useRouteError();
     // console.error(error)
-    const {data, status , error, statusText} = errorPage || {}
+    const {data, status , error, statusText} = errorPage;
     const {message } = error || {};
     return (
         <div className="text-center my-10">
