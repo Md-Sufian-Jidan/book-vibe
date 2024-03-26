@@ -1,7 +1,7 @@
 # Book Vibe
 Site Live Link : safe-tail.surge.sh
 
-This is he top five feature of my website :
+Here is the top feature of my website :
 1) The website is for book lover and it was Dynamic Route.
 
 2) The books data are nicely managed by card and each card has single book data.
