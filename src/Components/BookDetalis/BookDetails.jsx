@@ -6,15 +6,16 @@ import { saveToLocalStorage } from "../../Utils/LocalStorage";
 const BookDetails = () => {
     const { books } = UseBooksData();
     const { id } = useParams();
-
     const idInt = parseInt(id);
     const book = books.find((b) => b.id === idInt);
 
     const { img, title, publisher, book_type, rating, review, number_of_pages ,publish_year
     } = book || {};
+    
     // console.log(book);
-    const handleReadBtn =(book)=> {
+    const handleReadBtn =()=> {
         saveToLocalStorage(book);
+        
         // console.log(book);
     }
 
@@ -58,7 +59,7 @@ const BookDetails = () => {
                     <pre>Rating:               <span className="font-bold">{rating}</span></pre>
                 </div>
                 <div>
-                    <button onClick={()=> handleReadBtn(book)} className="btn p-3 border-2 hover:border-black  bg-[#1313134D] mx-2 rounded-xl">Read</button>
+                    <button onClick={()=> handleReadBtn()} className="btn p-3 border-2 hover:border-black  bg-[#1313134D] mx-2 rounded-xl">Read</button>
                     <button className="btn p-3 bg-[#50B1C9] rounded-lg hover:border-black border-2 text-white">Wishlist</button>
                 </div>
             </div>

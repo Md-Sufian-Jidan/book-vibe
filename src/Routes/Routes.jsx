@@ -25,7 +25,7 @@ import WishList from "../Components/NestedCard/WishList";
                     children: [
                         {
                             index: true,
-                            path: '',
+                            path: 'readBooks',
                             element:<ReadBooks />
                         },
                         {

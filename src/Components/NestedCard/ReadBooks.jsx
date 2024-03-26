@@ -1,40 +1,18 @@
-import { NavLink } from "react-router-dom";
-import UseBooksData from "../../Hooks/UseBooksData";
-import { FaLocationDot } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
-import { FaRegFile } from "react-icons/fa";
+
+import { getBook } from "../../Utils/LocalStorage";
+import ReadDetails from "./ReadDetails";
 
 const ReadBooks = () => {
-    const { books } = UseBooksData();
-    // const {id} = useParams;
+    const storedData = getBook()
+    // const {id} = useParams();
     // const book = books.find((b) => b.id === id);
-    const [book] = books
-    const { img, title, publisher, book_type, rating, review, number_of_pages ,publish_year
-    } = book;
-    // console.log(book)
+    console.log(storedData);
     return (
         <div>
-                <div>
-                    <img src={book?.img} alt="" />
-                </div>
-                <div>
-                <h1 className="text-5xl font-bold">{title}</h1>
-                <p className="my-5">By : {publisher}</p>
-                <div>
-                <p className="py-6"><span className="font-bold text-lg">Review :</span> {review}</p>
-                <p><span className="font-bold text-xl">Tag </span><span className="bg-gray-300 p-3 text-center rounded-[30px] text-[#23BE0A] font-bold text-lg mx-5">#{book?.tags[0]}</span><span className="bg-gray-300 p-3 text-center rounded-[30px] text-[#23BE0A] font-bold text-lg">#{book?.tags[1]}</span></p>
-                <p><FaLocationDot />Year Of Publishing : {publish_year}</p>
-                </div>
-                <div>
-                    <p><CgProfile />Publisher : {publisher}</p>
-                    <p><FaRegFile />Number of Pages: <span className="font-bold">{number_of_pages}</span></p>
-                </div>
-                <div className="my-5">
-                    <p className="p-2 bg-[#328EFF] text-[#328EFF]">Category : {book_type}</p>
-                    <p className="p-2 bg-[#FFAC3326] text-[#FFAC3326]">Rating : {rating}</p>
-                <NavLink to={'/listedBooks'}><button className="btn bg-[#23BE0A] my-5">View Details</button></NavLink>
-                </div>
-            </div>
+            {
+                storedData?.map(book => <ReadDetails key={book.id} book={book}/>)
+            }
+                
         </div>
     );
 };
