@@ -6,6 +6,9 @@ import Root from "../Layout/Root";
 import BookDetails from "../Components/BookDetalis/BookDetails";
 import ReadBooks from "../Components/NestedCard/ReadBooks";
 import WishList from "../Components/NestedCard/WishList";
+import ErrorPage from "../Components/Error/ErrorPage";
+import BookSection from "../Pages/BookSection";
+import BookReview from "../Pages/BookReview";
 // import ReadBooks from "../Components/NestedCard/ReadBooks";
 // import WishList from "../Components/NestedCard/WishList";
 
@@ -13,7 +16,7 @@ import WishList from "../Components/NestedCard/WishList";
         {
             path: '/',
             element: <Root />,
-            errorElement: <div>error</div>,
+            errorElement: <ErrorPage/>,
             children: [
                 {
                     path: '/',
@@ -41,6 +44,14 @@ import WishList from "../Components/NestedCard/WishList";
                 {
                     path: '/pagesRead',
                     element: <PagesRead />
+                },
+                {
+                    path: '/bookSection',
+                    element: <BookSection />
+                },
+                {
+                    path: '/bookReview',
+                    element: <BookReview />
                 }
             ]
         }

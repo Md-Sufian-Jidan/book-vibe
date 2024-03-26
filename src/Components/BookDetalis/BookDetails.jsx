@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import UseBooksData from "../../Hooks/UseBooksData";
-import { saveToLocalStorage } from "../../Utils/LocalStorage";
+import { saveToLocalStorage, saveWishList } from "../../Utils/LocalStorage";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,6 +17,9 @@ const BookDetails = () => {
     // console.log(book);
     const handleReadBtn =()=> {
         saveToLocalStorage(book);        
+    }
+    const handleWishList =()=> {
+        saveWishList(book);
     }
 
     return (
@@ -42,7 +45,7 @@ const BookDetails = () => {
                 <img className="bg-base-200 text-center p-16 lg:w-[400px]" src={img} alt="" />
             </div>
             <div>
-                <h1 className="text-5xl font-bold">{title}</h1>
+                <h1 className="text-5xl font-bold my-4">{title}</h1>
                 <p className="my-5">By : {publisher}</p>
                 <div className="divider">
                 </div>
@@ -60,7 +63,7 @@ const BookDetails = () => {
                 </div>
                 <div>
                     <button onClick={()=> handleReadBtn()} className="btn p-3 border-2 hover:border-black  bg-[#1313134D] mx-2 rounded-xl">Read</button>
-                    <button className="btn p-3 bg-[#50B1C9] rounded-lg hover:border-black border-2 text-white">Wishlist</button>
+                    <button onClick={()=> handleWishList()} className="btn p-3 bg-[#50B1C9] rounded-lg hover:border-black border-2 text-white">Wishlist</button>
                 </div>
             </div>
             <ToastContainer />

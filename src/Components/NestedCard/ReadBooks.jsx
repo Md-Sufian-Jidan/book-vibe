@@ -6,7 +6,7 @@ const ReadBooks = () => {
     const storedData = getBook()
     // const {id} = useParams();
     // const book = books.find((b) => b.id === id);
-    console.log(storedData);
+    // console.log(storedData);
     return (
         <div>
             {
