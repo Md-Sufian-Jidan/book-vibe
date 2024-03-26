@@ -2,33 +2,36 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { FaArrowDown } from "react-icons/fa";
 import { getBook } from "../Utils/LocalStorage";
+import UseBooksData from "../Hooks/UseBooksData";
 // import UseBooksData from "../Hooks/UseBooksData";
 
 const ListedBooks = () => {
+    const { books } = UseBooksData();
+    const [book , setBooks] = useState()
     const [tabIndex, setTabIndex] = useState(0);
-
     const [b, setB] = useState()
 
     useEffect(() => {
-        const books = getBook();
-        setB(books)
-        console.log(books)
+        const bk = getBook();
+        setB(bk)
+        setBooks(books)
+        // console.log(books)
     }, [])
 
-    // const handleBooksFilter = (filter) => {
-    //     if (filter === 'rating') {
-    //         const rating = listedBooks.filter((book) => book.rating === "rating")
-    //         setDisplayBooks(rating);
-    //     }
-    //     else if (filter === 'number_of_pages') {
-    //         const pages = listedBooks.filter((job) => job.remote_or_onsite === 'number_of_pages')
-    //         setDisplayBooks(pages);
-    //     }
-    //     else if (filter === 'publisher_year') {
-    //         const publisher_years = listedBooks.filter((job) => job.remote_or_onsite === 'publisher_year');
-    //         setDisplayBooks(publisher_years)
-    //     }
-    // }
+    const handleBooksFilter = (filter) => {
+        if (filter === 'rating') {
+            const rating = listedBooks.filter((book) => book.rating === "rating")
+            setDisplayBooks(rating);
+        }
+        else if (filter === 'number_of_pages') {
+            const pages = listedBooks.filter((job) => job.remote_or_onsite === 'number_of_pages')
+            setDisplayBooks(pages);
+        }
+        else if (filter === 'publisher_year') {
+            const publisher_years = listedBooks.filter((job) => job.remote_or_onsite === 'publisher_year');
+            setDisplayBooks(publisher_years)
+        }
+    }
 
 
     return (
@@ -37,7 +40,7 @@ const ListedBooks = () => {
                 <h2 className="text-3xl font-bold">Books</h2>
             </div>
             <div>
-                <div className="dropdown dropdown-end  mx-[200px]">
+                <div className="dropdown dropdown-end lg:mx-[600px]  mx-[250px]">
                     <div tabIndex={0} role="button" className="btn m-1">Sort By<FaArrowDown /></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={() => handleBooksFilter('rating')}><a>Rating</a></li>

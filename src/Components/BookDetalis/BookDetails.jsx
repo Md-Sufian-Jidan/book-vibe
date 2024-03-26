@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import UseBooksData from "../../Hooks/UseBooksData";
 import { saveToLocalStorage } from "../../Utils/LocalStorage";
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
-
+  
 const BookDetails = () => {
     const { books } = UseBooksData();
     const { id } = useParams();
@@ -14,9 +16,7 @@ const BookDetails = () => {
     
     // console.log(book);
     const handleReadBtn =()=> {
-        saveToLocalStorage(book);
-        
-        // console.log(book);
+        saveToLocalStorage(book);        
     }
 
     return (
@@ -63,6 +63,7 @@ const BookDetails = () => {
                     <button className="btn p-3 bg-[#50B1C9] rounded-lg hover:border-black border-2 text-white">Wishlist</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
 
     );
