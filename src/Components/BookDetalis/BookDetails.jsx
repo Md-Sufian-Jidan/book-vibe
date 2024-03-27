@@ -62,7 +62,7 @@ const BookDetails = () => {
                     <pre>Rating:               <span className="font-bold">{rating}</span></pre>
                 </div>
                 <div>
-                    <button onClick={()=> handleReadBtn()} className="btn p-3 border-2 hover:border-black  bg-[#1313134D] mx-2 rounded-xl">Read</button>
+                    <button onClick={()=> handleReadBtn()} className="btn p-3 border-2 hover:border-black  bg-[#1313134D] hover:text-white hover:bg-[#23BE0A] mx-2 rounded-xl">Read</button>
                     <button onClick={()=> handleWishList()} className="btn p-3 bg-[#50B1C9] rounded-lg hover:border-black border-2 text-white">Wishlist</button>
                 </div>
             </div>

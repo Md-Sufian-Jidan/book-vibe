@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Banner />
             <BookTitle />
-            <div className="grid md:grid-cols-3 mx-10 gap-5 my-5">
+            <div className="grid md:grid-cols-3 mx-5 gap-3 my-5">
                 {
                     books.map((book) => <BookCard key={book.id} book={book}/>)
                 }

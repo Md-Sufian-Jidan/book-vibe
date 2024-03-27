@@ -20,15 +20,13 @@ const PagesRead = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
     return (
-        <div className='lg:mx-[400px] my-5'>
+        <div className='lg:mx-16 my-10'>
             {/* <h2>i am from read pages </h2> */}
             <BarChart
-                width={600}
+                width={1200}
                 height={300}
                 data={books}
-                margin={{
-                    top: 20, right: 30, left: 20, bottom: 5,
-                }}>
+               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="book_name" />
                 <YAxis dataKey={"number_of_pages"}/>

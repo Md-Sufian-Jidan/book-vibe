@@ -27,10 +27,6 @@ import BookReview from "../Pages/BookReview";
                     element: <ListedBooks />,
                     children: [
                         {
-                            index: true,
-                            element:<ReadBooks />
-                        },
-                        {
                             path: 'wishlist',
                             element: <WishList />
                         }
