@@ -23,23 +23,6 @@ const BookDetails = () => {
     }
 
     return (
-        //     <div className="hero min-h-screen bg-base-200">
-        //     <div className="hero-content flex-col lg:flex-row gap-100">
-        //         <img src={img} className="max-w-sm rounded-lg shadow-2xl" />
-        //         <div>
-        //             <h1 className="text-5xl font-bold">{title}</h1>
-        //             <p className="my-5">By : {publisher}</p>
-        //             <div className="divider">
-        //             </div>
-        //             <p className="font-bold text-xl">{book_type}</p>
-        //             <div className="divider">
-        //             </div>
-        //             <p className="py-6"><span className="font-bold text-lg">Review :</span> {review}</p>
-        //             <p>Tag :</p>
-        //             <button className="btn btn-primary">Get Started</button>
-        //         </div>
-        //     </div>
-        // </div>
         <div className="lg:flex justify-between lg:mx-28 mx-36 my-10 ">
             <div className="">
                 <img className="bg-base-200 text-center p-16 lg:w-[400px]" src={img} alt="" />

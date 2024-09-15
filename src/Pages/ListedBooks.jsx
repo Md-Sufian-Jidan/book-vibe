@@ -27,6 +27,7 @@ const ListedBooks = () => {
             setDisplayBooks(booksList)
         }
     }, [books]);
+
     const singleRating = bk?.map(book => book.rating);
     const singleNumberOfPages = bk?.map(book => book.number_of_pages);
     const singlePublish_year = bk?.map(book => book.publish_year);
@@ -41,6 +42,7 @@ const ListedBooks = () => {
 
         if(filter == ratingDes){
             const remaining = bk?.filter((book) => console.log(book?.rating) == console.log(filter));
+            console.log(remaining);
             const sort = remaining?.sort((rem1 , rem2) => rem2?.rating - rem1?.rating)
             console.log(sort);
             setDisplayBooks(sort)
