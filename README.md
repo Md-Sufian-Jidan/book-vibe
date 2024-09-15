@@ -1,7 +1,7 @@
 # Website Name : Book Vibe
-# Site Live Link : safe-tail.surge.sh
+## Live Link : <a href="https://safe-tail.surge.sh/" target="_blank">Visit</a>
 
-Here is the top feature of my website :
+### Here is the top feature of my website :
 1) The website is for book lover and it was Dynamic Route.
 
 2) The books data are nicely managed by card and each card has single book data.
@@ -16,7 +16,13 @@ Here is the top feature of my website :
 
 7) At End Stay with Us For More New Updates and Enjoy Your Reading  
 
-Currently, two official plugins are available:
+### Technologies i use in this project :-
+- React js
+- Tailwind css
+- Daisy Ui
+- react-icons
+- react-router-dom
+- react-toastify
+- recharts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  Thank You for giving you time and reading all this thing.😊 
